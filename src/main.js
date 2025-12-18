@@ -13,6 +13,7 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.form-input');
 
 form.addEventListener('submit', handlerSubmit);
+hideLoader();
 
 function handlerSubmit(event) {
   event.preventDefault();
