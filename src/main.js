@@ -1,13 +1,13 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { getImagesByQuery } from './js/paxabay-api';
+import { getImagesByQuery } from './js/pixabay-api';
 import {
   createGallery,
   clearGallery,
   showLoader,
   hideLoader,
-} from './js/render-function';
+} from './js/render-functions';
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.form-input');

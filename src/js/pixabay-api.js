@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createGallery } from './render-function';
+import { createGallery } from './render-functions';
 
 const API_KEY = '53452930-453d1b75f98a5875cf6a66d5c';
 
