@@ -17,7 +17,11 @@ hideLoader();
 
 function handlerSubmit(event) {
   event.preventDefault();
-  const searchValue = input.value;
+  const searchValue = input.value.trim();
+
+  if (!searchValue) {
+    return;
+  }
 
   clearGallery();
   showLoader();
@@ -36,6 +40,13 @@ function handlerSubmit(event) {
         createGallery(res.data.hits);
       }
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+      iziToast.show({
+        message: `${error}`,
+        position: 'topRight',
+        backgroundColor: '#ef4040',
+        messageColor: '#fff',
+      });
+    })
     .finally(() => hideLoader());
 }
